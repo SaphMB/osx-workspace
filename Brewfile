@@ -17,24 +17,18 @@ brew "git-duet/tap/git-duet"
 brew "go"
 brew "hub"
 brew "jq"
-brew "libksba"
-brew "libyaml"
-brew "neovim"
 brew "openssl@1.1"
 brew "pivotal/tap/pivnet-cli"
-brew "pkg-config"
 brew "python"
-brew "sl"
 brew "terraform"
-brew "tldr"
 brew "zsh"
-brew 'docker'
 
 cask "caffeine"
 cask "java"
 cask '1password'
 cask 'discord'
 cask 'divvy'
+cask 'docker'
 cask 'dropbox'
 cask 'flycut'
 cask 'github'
