@@ -1,0 +1,18 @@
+#!/usr/bin/env zsh
+
+set -e
+
+install_homebrew() {
+  if [ ! -x /usr/local/bin/brew ]
+  then
+    echo "Installing Homebrew"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  else
+    echo "Homebrew already installed, checking for updates"
+    brew update
+  fi
+}
+
+install_homebrew
+
+brew bundle

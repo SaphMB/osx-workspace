@@ -7,5 +7,9 @@ Scripting the setup of a macOS Sierra computer.
 ```
 git clone https://github.com/SaphMB/osx-workspace
 cd osx-workspace
-./brew_installs
+./shell_setup | bash
 ```
+
+### Configs
+
+Update ~/.zshrc with the .zshrc file in this repo.
