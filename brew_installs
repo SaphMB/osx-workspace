@@ -1,0 +1,42 @@
+#!/usr/bin/env zsh
+
+set -ex
+
+install_homebrew() {
+  echo "Homebrew check"
+  if [ ! -x /usr/local/bin/brew ]
+  then
+    echo "Installing Homebrew"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  else
+    echo "checking for Homebrew updates"
+    brew update
+  fi
+}
+
+install_packages() {
+  install_or_upgrade zsh 
+  install_or_upgrade awscli
+  install_or_upgrade bbl
+  install_or_upgrade credhub-cli
+  install_or_upgrade git
+  install_or_upgrade git-crypt
+  install_or_upgrade git-duet
+  install_or_upgrade go
+  install_or_upgrade hub
+  install_or_upgrade jq
+  install_or_upgrade openssl
+  install_or_upgrade pivnet-cli
+  install_or_upgrade python
+  install_or_upgrade terraform
+}
+
+install_or_upgrade() {
+  if [ ! -x /usr/local/bin/$1]
+  then
+    brew install $1 
+  fi
+}
+
+install_homebrew
+install_packages
