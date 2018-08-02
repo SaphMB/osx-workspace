@@ -1,0 +1,19 @@
+#!/usr/bin/env zsh
+
+set -e
+
+go get github.com/onsi/ginkgo/ginkgo
+
+# cdgo
+go get github.com/EngineerBetter/cdgo-cli
+
+#concourse-up
+version=$(curl --silent "https://api.github.com/repos/EngineerBetter/concourse-up/releases/latest" | jq -r .tag_name)
+release_path=https://github.com/EngineerBetter/concourse-up/releases/download/$version/concourse-up-darwin-amd64
+curl -SLO $release_path
+chmod +x concourse-up-darwin-amd64
+mv concourse-up-darwin-amd64 $GOPATH/bin/concourse-up
+concourse-up -v
+
+#yaml2env
+go get github.com/EngineerBetter/yml2env
