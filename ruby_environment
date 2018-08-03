@@ -1,0 +1,35 @@
+#!/usr/bin/env zsh
+
+set -e
+
+install_rvm() {
+  echo "Setting up RVM"
+  if [ -z "$rvm_path" ]
+  then
+    echo "Installing a fresh version of RVM"
+    command curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+    curl -L https://get.rvm.io | bash -s stable
+    source ~/.rvm/scripts/rvm
+    type rvm | head -n 1
+  else
+    echo "Checking for RVM updates"
+    rvm get stable
+    source ~/.rvm/scripts/rvm
+  fi
+}
+
+install_ruby() {
+  echo -e "\e[31mInstalling Ruby\e[0m"
+  rvm use ruby --install --default
+}
+
+install_rvm
+install_ruby
+ruby -v
+
+echo "💎💎💎💎💎💎Installing Gems💎💎💎💎💎💎"
+gem install rspec --no-document
+gem install bundler --no-document
+gem install pry --no-document
+gem install rake --no-document
+gem install rubocop --no-document
