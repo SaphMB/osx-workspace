@@ -15,4 +15,5 @@ install_homebrew() {
 
 install_homebrew
 
+echo "Installing brew packages"
 brew bundle
