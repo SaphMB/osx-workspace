@@ -2,12 +2,27 @@
 
 set -e
 
+echo "Getting Ginkgo"
 go get github.com/onsi/ginkgo/ginkgo
 
 # cdgo
+echo "Getting cdgo"
 go get github.com/EngineerBetter/cdgo-cli
 
-#concourse-up
+# yaml2env
+echo "Getting yaml2env"
+go get github.com/EngineerBetter/yml2env
+
+# dlv
+echo "Getting dlv"
+go get -u github.com/derekparker/delve/cmd/dlv
+
+# pprof
+echo "Getting pprof"
+go get -u github.com/google/pprof
+
+# concourse-up
+echo "Getting Concourse-Up"
 version=$(curl --silent "https://api.github.com/repos/EngineerBetter/concourse-up/releases/latest" | jq -r .tag_name)
 release_path=https://github.com/EngineerBetter/concourse-up/releases/download/$version/concourse-up-darwin-amd64
 curl -SLO $release_path
@@ -15,5 +30,11 @@ chmod +x concourse-up-darwin-amd64
 mv concourse-up-darwin-amd64 $GOPATH/bin/concourse-up
 concourse-up -v
 
-#yaml2env
-go get github.com/EngineerBetter/yml2env
+# fly
+echo "Getting fly"
+version=$(curl --silent "https://api.github.com/repos/concourse/concourse/releases/latest" | jq -r .tag_name)
+release_path=https://github.com/concourse/concourse/releases/download/$version/fly_darwin_amd64
+curl -SLO $release_path
+chmod +x fly_darwin_amd64
+mv fly_darwin_amd64 $GOPATH/bin/fly
+fly -v
