@@ -29,3 +29,16 @@ Update ~/.gitconfig with the .gitconfig in this repo.
 #### VSCode
 * Install the code-settings-sync VSCode plugin
 * Download files uploaded to Gist with `Shift + Option + U`, providing a github api token when prompted
+
+#### Vim config
+
+Create a directory for packages and update ~/.vimrc with the .vimrc in this repo.
+```
+mkdir ~/.vim/plugged
+```
+
+Install packages
+```
+vim ~/.vimrc
+:PlugInstall
+```
