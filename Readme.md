@@ -21,10 +21,10 @@ Together, these will install install rvm and the latest stable version of Ruby, 
 ### Configs
 
 #### zsh
-Update ~/.zshrc with the .zshrc file in this repo.
+Create a symlink from the ./zshrc in this repo to ~./zshrc.
 
 #### Git config
-Update ~/.gitconfig with the .gitconfig in this repo.
+Create a symlink from the ./gitconfig in this repo to ~./gitconfig.
 
 #### VSCode
 * Install the code-settings-sync VSCode plugin
