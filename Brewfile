@@ -14,8 +14,8 @@ brew "direnv"
 brew "git"
 brew "git-crypt"
 brew "git-duet/tap/git-duet"
-brew "go"
 brew "gnupg"
+brew "go"
 brew "hub"
 brew "jq"
 brew "openssl@1.1"
@@ -35,4 +35,5 @@ cask 'flycut'
 cask 'github'
 cask 'iterm2'
 cask 'spectacle'
+cask 'visual-studio-code'
 cask 'zoomus'
