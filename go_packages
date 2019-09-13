@@ -15,7 +15,7 @@ go get github.com/EngineerBetter/yml2env
 
 # dlv
 echo "Getting dlv"
-go get -u github.com/derekparker/delve/cmd/dlv
+go get -u github.com/go-delve/delve/cmd/dlv
 
 # pprof
 echo "Getting pprof"
