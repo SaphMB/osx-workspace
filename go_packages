@@ -33,8 +33,13 @@ concourse-up -v
 # fly
 echo "Getting fly"
 version=$(curl --silent "https://api.github.com/repos/concourse/concourse/releases/latest" | jq -r .tag_name)
-release_path=https://github.com/concourse/concourse/releases/download/$version/fly_darwin_amd64
-curl -SLO $release_path
-chmod +x fly_darwin_amd64
-mv fly_darwin_amd64 $GOPATH/bin/fly
-fly -v
+git clone git@github.com:concourse/concourse.git
+
+pushd concourse/fly
+  git checkout tags/$version
+  go build
+  chmod +x fly
+  mv fly $GOPATH/bin/fly
+popd
+
+rm -rf concourse
