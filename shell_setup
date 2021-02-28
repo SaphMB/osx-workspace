@@ -17,7 +17,19 @@ install_homebrew() {
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   else
     echo "Homebrew already installed, checking for updates"
+    # git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core fetch --unshallow
+    # git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask fetch --unshallow
     brew update
+  fi
+}
+
+install_zsh() {
+  if f [ -z "$ZSH" ]
+  then
+    echo "Installing oh-my-zsh"
+    zsh_installation_dir=$(/Users/sapphiremason-brown/.oh-my-zsh)
+  else
+    echo "ZSH already installed, skipping installation"
   fi
 }
 
@@ -26,10 +38,8 @@ install_homebrew
 echo "Installing brew packages"
 brew bundle
 
-echo "Installing oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+install_zsh()
 
 echo "----------------------------------------------------------------------"
 echo "|  🕰 Now would be a good time to update ~/.zshrc and ~/.gitconfig 🕰  |"
 echo "----------------------------------------------------------------------"
-
