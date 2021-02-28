@@ -1,6 +1,6 @@
 # osx-workspace
 
-Scripting the setup of a macOS Sierra computer.
+Scripting the setup of a macOSX computer.
 
 ## Initial set-up
 
