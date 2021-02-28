@@ -2,6 +2,14 @@
 
 set -e
 
+if [ ! -x /Library/Developer/CommandLineTools ]
+  then
+    echo "Installing Command Line tools"
+    xcode-select --install
+  else
+    echo "Command Line tools ($(xcode-select --version)) already installed, skipping installation"
+fi
+
 install_homebrew() {
   if [ ! -x /usr/local/bin/brew ]
   then
