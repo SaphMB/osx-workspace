@@ -19,27 +19,4 @@ go install github.com/go-delve/delve/cmd/dlv@latest
 
 # pprof
 echo "Getting pprof"
-go get -u github.com/google/pprof
-
-# concourse-up
-echo "Getting Concourse-Up"
-version=$(curl --silent "https://api.github.com/repos/EngineerBetter/concourse-up/releases/latest" | jq -r .tag_name)
-release_path=https://github.com/EngineerBetter/concourse-up/releases/download/$version/concourse-up-darwin-amd64
-curl -SLO $release_path
-chmod +x concourse-up-darwin-amd64
-mv concourse-up-darwin-amd64 $GOPATH/bin/concourse-up
-concourse-up -v
-
-# fly
-echo "Getting fly"
-version=$(curl --silent "https://api.github.com/repos/concourse/concourse/releases/latest" | jq -r .tag_name)
-git clone git@github.com:concourse/concourse.git
-
-pushd concourse/fly
-  git checkout tags/$version
-  go build
-  chmod +x fly
-  mv fly $GOPATH/bin/fly
-popd
-
-rm -rf concourse
+go install github.com/google/pprof@latest
