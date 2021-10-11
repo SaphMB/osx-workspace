@@ -37,6 +37,7 @@ install_homebrew
 
 echo "Installing brew packages"
 brew bundle
+brew upgrade
 
 install_zsh()
 
