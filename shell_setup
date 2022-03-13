@@ -2,6 +2,8 @@
 
 set -e
 
+echo "🐚🐚🐚🐚🐚 Beginning shell setup 🐚🐚🐚🐚🐚\n"
+
 if [ ! -x /Library/Developer/CommandLineTools ]
   then
     echo "Installing Command Line tools"
