@@ -2,6 +2,8 @@
 
 set -e
 
+echo "\n💎💎💎💎💎 Installing Ruby 💎💎💎💎💎\n"
+
 install_rvm() {
   echo "Setting up RVM"
   if [ -z "$rvm_path" ]
@@ -27,7 +29,7 @@ install_rvm
 install_ruby
 ruby -v
 
-echo "💎💎💎💎💎💎Installing Gems💎💎💎💎💎💎"
+echo "\nInstalling Gems 💎💎💎\n"
 gem install rspec --no-document
 gem install bundler --no-document
 gem install pry --no-document
