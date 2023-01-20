@@ -18,6 +18,8 @@ This will install Homebrew, all Homebrew packages and oh-my-zsh.
 
 Together, these will install install rvm and the latest stable version of Ruby, as well as all regularly-used Ruby and Go packages.
 
+Alternatively, run `setup_all.sh` to run all setup scripts.
+
 ### Configs
 
 #### zsh
