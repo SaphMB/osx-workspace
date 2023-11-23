@@ -16,7 +16,8 @@ install_homebrew() {
   if [ ! -x /usr/local/bin/brew ]
   then
     echo "Installing Homebrew"
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
   else
     echo "Homebrew already installed, checking for updates"
     # git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core fetch --unshallow
