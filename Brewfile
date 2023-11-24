@@ -25,7 +25,6 @@ brew "terraform"
 brew "zsh"
 
 cask "caffeine"
-cask "java"
 cask '1password'
 cask 'discord'
 cask 'divvy'
