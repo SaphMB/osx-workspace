@@ -27,10 +27,10 @@ install_homebrew() {
 }
 
 install_zsh() {
-  if f [ -z "$ZSH" ]
+  if [ -z "$ZSH" ]
   then
     echo "Installing oh-my-zsh"
-    zsh_installation_dir=$(/Users/sapphiremason-brown/.oh-my-zsh)
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   else
     echo "ZSH already installed, skipping installation"
   fi
@@ -42,7 +42,8 @@ echo "Installing brew packages"
 brew bundle
 brew upgrade
 
-install_zsh()
+echo "Attempting to install ZSH"
+install_zsh
 
 echo "----------------------------------------------------------------------"
 echo "|  🕰 Now would be a good time to update ~/.zshrc and ~/.gitconfig 🕰  |"
