@@ -4,6 +4,7 @@ set -e
 
 echo "\n📦📦📦📦📦 Installing Go packages 📦📦📦📦📦 \n"
 
+# ginkgo
 echo "Getting Ginkgo"
 go install github.com/onsi/ginkgo/ginkgo@latest
 

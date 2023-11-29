@@ -113,3 +113,8 @@ eval "$(direnv hook zsh)"
 # K8s helpers
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 alias 'k'='kubectl'
+
+# Go helpers
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$HOME/bin:/usr/local/bin:$GOBIN:$PATH
