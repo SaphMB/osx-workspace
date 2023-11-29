@@ -100,8 +100,9 @@ alias 'git dci'='git duet-commit'
 alias 'git drv'='git duet-revert'
 alias 'git dmg'='git duet-merge'
 
-# Alias Hub with Git
+# Git aliases
 alias git=hub
+alias 'git st'='git status'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -109,3 +110,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # Hook for Direnv
 eval "$(direnv hook zsh)"
 
+# K8s helpers
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+alias 'k'='kubectl'
