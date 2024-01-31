@@ -22,6 +22,7 @@ brew "openssl@1.1"
 brew "pinentry-mac"
 brew "python"
 brew "terraform"
+brew "tree"
 brew "zsh"
 
 cask "caffeine"
