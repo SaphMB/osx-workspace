@@ -21,6 +21,7 @@ brew "pinentry-mac"
 brew "python"
 brew "terraform"
 brew "tree"
+brew "yq"
 brew "zsh"
 
 cask "caffeine"
