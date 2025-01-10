@@ -3,6 +3,7 @@ tap "homebrew/bundle"
 
 brew "awscli"
 brew "direnv"
+brew "docker-buildx"
 brew "git"
 brew "git-crypt"
 brew "git-duet/tap/git-duet"
