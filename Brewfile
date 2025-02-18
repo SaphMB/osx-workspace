@@ -1,9 +1,11 @@
 tap "git-duet/tap"
 tap "homebrew/bundle"
 
+brew "act"
 brew "awscli"
 brew "direnv"
 brew "docker-buildx"
+brew "gh"
 brew "git"
 brew "git-crypt"
 brew "git-duet/tap/git-duet"
