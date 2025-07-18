@@ -1,5 +1,4 @@
 tap "git-duet/tap"
-tap "homebrew/bundle"
 
 brew "act"
 brew "awscli"
@@ -19,9 +18,9 @@ brew "jq"
 brew "kind"
 brew "kubectl"
 brew "minikube"
-brew "openssl@1.1"
 brew "pinentry-mac"
 brew "python"
+brew "rbenv"
 brew "terraform"
 brew "tree"
 brew "yq"
@@ -40,6 +39,5 @@ cask 'iterm2'
 cask 'karabiner-elements'
 cask 'notion'
 cask 'slack'
-cask 'spectacle'
 cask 'visual-studio-code'
 cask 'zoom'
